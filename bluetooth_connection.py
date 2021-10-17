@@ -53,6 +53,7 @@ class Bluetooth:
         client_sock, client_info = self.server_sock.accept()
         try:
             while True:
+                print("Waiting for data")
                 data = client_sock.recv(1024)
                 if len(data) == 0: break
                 print("received [%s]" % data)
@@ -81,9 +82,9 @@ class Bluetooth:
         # thread = threading.Thread(target=self.client_connect)
         # thread.start()
         while (serveron == True):
-            # self.client_connect()
-            self.send_data("Hello World")
-            time.sleep(2)
+            self.client_connect()
+            # self.send_data("Hello World")
+            # time.sleep(2)
             # print("disconnected")
             # # client_sock.close()
             # self.server_sock.close()
