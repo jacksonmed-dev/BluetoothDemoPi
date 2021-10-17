@@ -59,7 +59,6 @@ class Bluetooth:
                 if len(data) == 0: break
                 print("received [%s]" % data)
                 # print("get ip: " + get_ip())
-                self.client_sock.send(bytes("Hello Back", "utf-8"))
         except IOError:
             pass
 
