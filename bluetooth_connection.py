@@ -80,8 +80,10 @@ class Bluetooth:
                 self.client_sock.send(temp[i * 1024:(i + 1) * 1024])
 
     def send_dummy_data(self):
+        i = 0
         while True:
-            self.send_data("Sending Dummy Data")
+            self.send_data("Sending Dummy Data %d".format(i))
+            i = i + 1
             time.sleep(5)
 
     def run(self):
