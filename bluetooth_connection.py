@@ -83,7 +83,7 @@ class Bluetooth:
         while (serveron == True):
             # self.client_connect()
             self.send_data("Hello World")
-            time.sleep()
+            time.sleep(2)
             # print("disconnected")
             # # client_sock.close()
             # self.server_sock.close()
