@@ -34,6 +34,7 @@ class Bluetooth:
         self.client_sock, self.client_info = self.server_sock.accept()
         print("Accepted connection from ", self.client_info)
         self.client_sock.send(self.get_ip())
+        print("IP address sent")
 
 
     def get_ip(self):
@@ -51,6 +52,7 @@ class Bluetooth:
 
     def client_connect(self):
         client_sock, client_info = self.server_sock.accept()
+        print("Starting client connect function")
         try:
             while True:
                 print("Waiting for data")
@@ -81,6 +83,7 @@ class Bluetooth:
         serveron = True
         # thread = threading.Thread(target=self.client_connect)
         # thread.start()
+        print("Starting run function")
         while (serveron == True):
             self.client_connect()
             # self.send_data("Hello World")
