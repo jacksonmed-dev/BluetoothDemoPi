@@ -81,10 +81,12 @@ class Bluetooth:
         # thread = threading.Thread(target=self.client_connect)
         # thread.start()
         while (serveron == True):
-            self.client_connect()
-            print("disconnected")
-            # client_sock.close()
-            self.server_sock.close()
+            # self.client_connect()
+            self.send_data("Hello World")
+            time.sleep()
+            # print("disconnected")
+            # # client_sock.close()
+            # self.server_sock.close()
 
 
 
